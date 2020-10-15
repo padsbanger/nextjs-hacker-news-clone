@@ -7,7 +7,7 @@ const StoryList = (props) => {
       return (
         <div key={story.id} className="story-item">
           <h2>{story.title} </h2>
-          <p><strong>{story.points || 0} points</strong> <Link href={`/story?id${story.id}`}><a>{story.comments_count} comments</a></Link></p>
+          <p><strong>{story.points || 0} points</strong> <Link href={`/story?id=${story.id}`}><a>{story.comments_count} comments</a></Link></p>
         </div>
         )
       })}

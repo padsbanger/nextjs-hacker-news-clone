@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Router from 'next/router';
 
-const Layout = ({children, title}) => {
+const Layout = ({children, title, backButton}) => {
   return (
     <div>
       <Head>
@@ -9,6 +10,7 @@ const Layout = ({children, title}) => {
       </Head>
     <div className="container">
       <nav>
+        {backButton ? <span onClick={() => Router.back()}>&#x2b05;</span> : null }
         <Link href="/">
         <a>Hacker news</a>
         </Link>
